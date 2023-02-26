@@ -56,10 +56,10 @@ var itemList = document.querySelector('#items');
 // console.log(itemList.parentNode.parentNode.parentNode);
 
 //parentElement
-// console.log(itemList.parentElement);
-// itemList.parentElement.style.backgroundcolour = '#f4f4f4';
+console.log(itemList.parentElement);
+itemList.parentElement.style.backgroundcolour = '#f4f4f4';
 
-// console.log(itemList.parentElement.parentElement.parentElement);
+console.log(itemList.parentElement.parentElement.parentElement);
  
 
 //childNode
