@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment App</title>
+</head>
+<body>
+    <header id="main-header" class="bg-success text-white p-4 mb-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+
+              <h1 id="header-title">Book Appointment</h1>
+            </div>
+        
+            <!-- <form onsubmit="saveToLocalStorage(event)"> -->
+              <label for="visit">Reason For Visit :</label>
+              <br><br>
+              <select name="Reason For Visit" id="visit"> 
+
+              <option style ="width: 100px; height: 50px;"value="Yearly check up" >Yearly check up</option>
+              <option value="Follow up visit">Follow up visit</option>
+              <option value="New patient health care">New patient health care</option>
+              <option value="Other">Other</option>
+            </select>
+            <br> <br>
+            
+                <!-- <label>Name :</label>
+                <input type = "text" name = "username" placeholder="Your Name" on /> 
+                <br> <br>
+            
+                <label>Email :</label>
+                <input type="text" name = "emailId" placeholder="Valid Email" />
+                <br><br>
+            
+                <label>Phone Number :</label>
+                <input type="tel" name = "phonenumber" placeholder="Phone Number" />
+                <br><br> -->
+            
+                <label>Name :</label>
+                <input type="text" name="name" id="name" class="name" placeholder="Name" on />
+        
+        
+                <label>Email :</label>
+                <input type="text" name="email" id="email" placeholder="Valid Email" />
+        
+                <label>Phone :</label>
+                <input type="text" name="phone" id="phone" placeholder="Phone" />
+        
+                <label>Time for call :</label>
+                <input type="text" name="call" id="call" placeholder="Time for appointment" />
+        
+
+                <!-- <script>
+                  function myFunction() {
+                    alert("Are you sure ?");
+                  }
+                </script> -->
+            
+                <input type="submit" class="btn btn-dark" value="Cancel"> 
+                <button>Submit</button>
+            </form>
+               
+            <script src="example.js">
+              // function saveToLocalStorage(event){
+              //   event.preventDefault();
+              //   const name = event.target.username.value;
+              //   const email = event.target.emailId.value;
+              //   const phonenumber = event.target.phonenumber.value;
+
+              //   localStorage.setItem('name', name);
+              //   localStorage.setItem('email', email);
+              //   localStorage.setItem('phonenumber', phonenumber);
+
+              // }
+
+            </script>
+       
+
+  
+
+  
+
+  </form>
+</div>
+</div>
+
+</body>
+</html>
