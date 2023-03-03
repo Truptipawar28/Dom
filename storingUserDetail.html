@@ -23,9 +23,9 @@
                 const email = event.target.emailId.value;
                 const phonenumber = event.target.phonenumber.value;
 
-                localStorage.setItem('name', name);
-                localStorage.setItem('email', email);
-                localStorage.setItem('phonenumber', phonenumber);
+                // localStorage.setItem('name', name);
+                // localStorage.setItem('email', email);
+                // localStorage.setItem('phonenumber', phonenumber);
                 
                 const obj = {
                     name,
@@ -34,6 +34,21 @@
                 };
                 localStorage.setItem('userDeatils', JSON.stringify(obj))
             }
+
+            function showUserOnScreen(obj){
+                const parentELem = document.getElementById('listOfitems')
+                
+                const childElem = document.createElement('li')
+                childElem.textContent = obj.name + '-' + obj.email + '-' + obj.phonenumber
+                parentELem.appendChild(childElem)
+
+                        // or
+
+                //    parentELem.innerHTML = parentELen.innerHTML +`<li>${obj.name} - ${obj.email} - ${obj.phonenumber}</li>`    
+                     
+            }
+
+
         </script>
     </body>
 </html>
