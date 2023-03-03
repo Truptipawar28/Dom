@@ -11,10 +11,11 @@
             <label>Phone Number :</label>
             <input type="tel" name="phonenumber" />
 
-            <button>Submit</button>
+            <button> Submit </button>
 
         </form>
 
+        <ul id = 'listOfitems'></ul>
         <script>
             function saveToLocalStorage(event) {
                 event.preventDefault();
@@ -31,8 +32,9 @@
                     name,
                     email,
                     phonenumber
-                };
-                localStorage.setItem('userDeatils', JSON.stringify(obj))
+                }
+                localStorage.setItem(obj.email, JSON.stringify(obj))
+                showUserOnScreen(obj)
             }
 
             function showUserOnScreen(obj){
@@ -40,12 +42,24 @@
                 
                 const childElem = document.createElement('li')
                 childElem.textContent = obj.name + '-' + obj.email + '-' + obj.phonenumber
-                parentELem.appendChild(childElem)
+                // parentELem.appendChild(childElem)
 
                         // or
 
                 //    parentELem.innerHTML = parentELen.innerHTML +`<li>${obj.name} - ${obj.email} - ${obj.phonenumber}</li>`    
                      
+                const deleteButton = document.createElement('input')
+               
+            //    Make it button
+                deleteButton.type = "button"  
+                deleteButton.value = "Delete" 
+                deleteButton.onclick = () => {
+                    localStorage.removeItem(obj.email)
+                    parentELem.removeChild(childElem)
+                }
+
+                childElem.appendChild(deleteButton)
+                parentELem.appendChild(childElem)
             }
 
 
